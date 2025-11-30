@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>in.kmit</groupId>
-  <artifactId>MyJavaProject</artfactId>
+  <artifactId>MyJavaProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>MyJavaProject</name>
@@ -17,7 +17,7 @@
   </properties>
 
   <dependencyManagement>
-  
+    <dependencies>
       <dependency>
         <groupId>org.junit</groupId>
         <artifactId>junit-bom</artifactId>
@@ -39,6 +39,11 @@
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version>
     </dependency>
   </dependencies>
 
@@ -67,7 +72,8 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
           <configuration>
-    	p${env.WINDIR}	<archive>
+    	
+    	<archive>
       		<manifest>
        			 <mainClass>in.kmit.MyJavaProject.App</mainClass>
      		</manifest>
